@@ -1,2 +1,15 @@
 <app-navbar></app-navbar>
+<div style="text-align:center">
+    <h1>
+      Mi codigo QA
+    </h1>
+    <ngx-qrcode 
+        [elementType]="elementType" 
+        [value]="value"
+        cssClass="aclass"
+        [errorCorrectionLevel]="errorCorrectionLevel">
+    </ngx-qrcode>
+  </div>
+  
+ 
 <router-outlet></router-outlet>

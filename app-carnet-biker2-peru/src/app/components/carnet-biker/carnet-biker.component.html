@@ -1,4 +1,4 @@
-
+<div id="output"></div>
 <div class="container pt-4">
     <div class="row">
         <div class="col-lg-6 offset-lg-3">
@@ -28,7 +28,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <span class="h5 pt-5">Datos Piloto</span>
-                                    <button class="btn  btn-primary btn-sm float-end " routerLink="crear-bikers">Imprimir </button>
+                                    <button class="btn  btn-primary btn-sm float-end " routerLink="crear-bikers">Generar QR </button>
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
@@ -53,12 +53,14 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-3 ">
+                                            <i class="fas fa-solid fa-user " style="font-size:5rem;color:#0762ac"></i>
                                         </div>
                                         <div class="col-9 text-start">
                                             <ul class="list-group list-group-flush">
                                                 <li class="list-group-item"><strong>NOMBRES:</strong>&nbsp;<span class="text-capitalize">{{bikerModel.nombreCopiloto1}}</span></li>
                                                 <li class="list-group-item"><strong>APELLIDOS:</strong>&nbsp;<span class="text-capitalize">{{bikerModel.apellidoCopiloto1}}</span></li>
                                                 <li class="list-group-item"><strong>DNI:</strong>&nbsp;<span class="text-capitalize">{{bikerModel.dniCopiloto1}}</span></li>
+                                                <li class="list-group-item"><strong>ESTADO:</strong>&nbsp;<button type="button" class="btn btn-sm btn-success">VERDE</button></li>
                                             </ul>
                                         </div>
                                     </div>

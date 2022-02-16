@@ -29,6 +29,7 @@ export class BikerService {
 
   //Obtener biker por DNI
   getBikerkByDNI(dni: string) {
+    console.log('getBikerkByDNI::'+dni);
     const bookRef = doc(this.firestore, `biker/${dni}`);
     return docData(bookRef, { idField: 'dni' }) as Observable<Biker>;
   }

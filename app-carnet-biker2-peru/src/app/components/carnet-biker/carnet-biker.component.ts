@@ -33,6 +33,7 @@ export class CarnetBikerComponent implements OnInit {
   ngOnInit(): void {
     console.log("==========");
     let dniBiker = sessionStorage.getItem('DNI_BIKER_KEY');    
+    console.log(''+dniBiker);
     this.bikerservice.getBikerkByDNI(''+dniBiker).subscribe(biker=>{
       this.bikerModel = biker;
     });

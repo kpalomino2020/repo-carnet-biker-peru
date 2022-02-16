@@ -116,7 +116,7 @@ export class BikerComponent implements OnInit {
     this.bikerModel.fechaActualizacion = new Date()
    
 
-  // this.firestore.collection('biker').add(bikerModel);// registra en la base de datos
+  ///this.firestore.collection('biker').add(bikerModel);// registra en la base de datos
    this.bikerService.addBiker(this.bikerModel);
   
    sessionStorage.setItem('DNI_BIKER_KEY', this.createBiker.value.dniBiker);
