@@ -1,0 +1,88 @@
+
+<div class="container pt-4">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card text-center">
+                <div class="card-body">
+                   
+                    <div class="row position-relative m-4 mt-5">
+                        <div class="position-relative">
+                            <div class="progress" style="height: 2px;">
+                              <div class="progress-bar" role="progressbar" id="bar-steps" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <button id="step1-id" type="button" class="position-absolute top-0 start-0 translate-middle btn btn-lg btn-primary rounded-pill" style="width: 3rem; height:3rem;">1</button>
+                            <button id="step2-id" type="button" class="position-absolute top-0 start-50 translate-middle btn btn-lg btn-secondary rounded-pill" style="width: 3rem; height:3rem;">2</button>
+                            <button id="step3-id" type="button" class="position-absolute top-0 start-100 translate-middle btn btn-lg btn-secondary rounded-pill" style="width: 3rem; height:3rem;">3</button>
+                        </div>  
+                    </div>
+                    
+                    <div class="row step1" *ngIf="step1activo">
+                        <h3 class="mt-2">Registrar Biker </h3>
+                        
+                        <form class="mt-2" [formGroup]="createBiker" (ngSubmit)="agregarBiker()" >
+                            <span *ngIf="submitted && createBiker.invalid" class="badge bg-danger ">INGRESE LOS CAMPOS DNI Y PLACA VÁLIDO</span>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <input type="text" class="form-control form-control-lg" formControlName="dniBiker"
+                                        placeholder="DNI">
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-primary btn-lg float-start" (click)="buscarDNIBiker()" id="id_btnBuscarDni">Buscar 
+                                        <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true" id="id_spanBtnDniBiker"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control form-control-lg mt-3" formControlName="nombreBiker" placeholder="Nombre" value="**" [(ngModel)]="nombreBiker"
+                            readonly>
+                            <input type="text" class="form-control form-control-lg mt-3" formControlName="apellidoBiker" placeholder="Apellido"  value="**" [(ngModel)]="apellidoBiker"
+                            readonly>
+                            <div class="row mt-5">
+                                <div class="col">
+                                    <input type="text" class="form-control form-control-lg" formControlName="placa"
+                                        id ="id_placa"
+                                        placeholder="Placa Moto">
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-primary btn-lg float-start"  (click)="buscarPlaca()">Buscar
+                                </button>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control form-control-lg mt-3" formControlName="modeloMoto" placeholder="Modelo" value="**" [(ngModel)]="constante"
+                                    readonly>
+                             <input type="text" class="form-control form-control-lg mt-3" formControlName="estadoMoto"  placeholder="Estado" value="**" [(ngModel)]="constante"
+                                    readonly>
+                             <input type="text" class="form-control form-control-lg mt-3" formControlName="propietarioMoto" placeholder="Propietario" value="**" [(ngModel)]="constante"
+                                    readonly>
+                                   
+                            <button type="submit" class="btn btn-primary btn-lg float-end mt-3">Siguiente.</button>
+                        </form>  
+                    </div>
+                    <div class="row step2" *ngIf="step2activo">
+                        <h3>Registrar Copiloto 1</h3>
+                        <form class="mt-2" [formGroup]="createCopiloto1" (ngSubmit)="agregarCopiloto1()" >
+                            <span *ngIf="submitted1 && createCopiloto1.invalid" class="badge bg-danger ">INGRESE EL DNI VÁLIDO</span>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <input type="text" class="form-control form-control-lg"  formControlName="dniCopiloto1"
+                                         placeholder="DNI">
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-primary btn-lg float-start" (click)="buscarDnicopiloto()" id="id_btnBuscarDniCopiloto">Buscar 
+                                        <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true" id="id_spanBtnDniCopiloto"></span>
+                                    </button>
+                                </div>
+                                
+                            </div>
+                            
+                            <input type="text" class="form-control form-control-lg mt-3" placeholder="Nombre" formControlName="nombreCopiloto1"  readonly [(ngModel)]="nombreCopiloto">                      
+                            <input type="text" class="form-control form-control-lg mt-3" placeholder="Apellido" formControlName="apellidoCopiloto1"  readonly [(ngModel)]="apellidoCopiloto">
+                            <button type="button" class="btn btn-secondary btn-lg float-start mt-3" (click)="volver()">Volver</button>
+                            <button type="submit" class="btn btn-primary btn-lg float-end mt-3">Siguiente</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,7 @@
 {
   "hosting": [
     {
+      "site": "carnet-biker2-peru",
       "public": "dist/app-carnet-biker2-peru",
       "ignore": [
         "firebase.json",

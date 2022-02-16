@@ -1,0 +1,57 @@
+<section class="h-100">
+    <div class="container h-100">
+        <div class="row justify-content-sm-center h-100">
+            <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9 mt-4">
+                <div class="card shadow-lg">
+                    <div class="card-body p-5">
+                        <h1 class="fs-4 card-title fw-bold mb-4 text-center">Login</h1>
+                        <form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+                           
+                            <div class="or-container">
+                                <div class="line-separator"></div>
+                                <div class="or-label">Con mi cuenta de Gmail</div>
+                                <div class="line-separator"></div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-md-12 "> 
+                                    <button type="button" class="btn btn-lg btn-google btn-block text-uppercase btn-outline" (click)="loginGoogle()" >
+                                      <img src="https://img.icons8.com/color/16/000000/google-logo.png" > Entrar usando Google
+                                    </button> 
+                                </div>
+                            </div> <br>
+                            <div class="d-flex align-items-center">
+                                <div class="form-check">
+                                    <input type="checkbox" name="remember" id="remember" class="form-check-input">
+                                    <label style="font-size: 1rem; display:block; ">
+                                        Acepto el <span id="chkPolitica2" style="font-size: 1rem; color:#1eb7ca; cursor: pointer"> tratamiento de mis datos personales y haber leído la Política de privacidad  </span>
+                                        </label>
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="text-center mt-5 text-muted">
+                    Copyright &copy; 2022 &mdash;. Desarrollado por TEC Digital Home | Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+// Fetch all the forms we want to apply custom Bootstrap validation styles to
+var forms = document.querySelectorAll('.needs-validation')
+
+// Loop over them and prevent submission
+Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+        }, false)
+    })
+</script>
