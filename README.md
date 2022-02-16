@@ -1,3 +1,3 @@
 # repo-carnet-biker-peru
 # aqui
-repositorio implementación carnet de biker para evitar que nos limiten la posibilidad de manejar 2 personas en una moto
+Esta aplicación es un piloto, para generar un carnet de biker. La idea es que los documentos ingresados sean validados por medio de servicios de gobierno para verificar que los ocupantes de la moto no tengan antecedentes policiales, penales, requisitorias. El oficial de la PNP podría escanear el QR para validar los datos y verificar la autentici…
