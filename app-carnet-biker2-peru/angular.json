@@ -98,6 +98,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "app-carnet-biker2-peru:build:production",
+            "firebaseProject": "proyect-biker",
+            "firebaseHostingSite": "carnet-biker2-peru"
+          }
         }
       }
     }

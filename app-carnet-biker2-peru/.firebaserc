@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "proyect-biker"
+  },
+  "targets": {
+    "proyect-biker": {
+      "hosting": {
+        "app-carnet-biker2-peru": [
+          "carnet-biker2-peru"
+        ]
+      }
+    }
+  }
+}
